@@ -139,7 +139,7 @@ class KubernetesDestinationPlugin(DestinationPlugin):
             "name": "kubernetesAuthToken",
             "type": "str",
             "required": False,
-            "validation": "[0-9a-zA-Z-_.]+",
+            "validation": "[0-9a-zA-Z-_.:]+",
             "helpMessage": "Must be a valid Kubernetes server Token!",
         },
         {
@@ -154,7 +154,7 @@ class KubernetesDestinationPlugin(DestinationPlugin):
             "name": "kubernetesServerCertificate",
             "type": "textarea",
             "required": False,
-            "validation": "-----BEGIN CERTIFICATE-----[a-zA-Z0-9/+\\s\\r\\n]+-----END CERTIFICATE-----",
+            "validation": "-----BEGIN CERTIFICATE-----[a-zA-Z0-9/=+\\s\\r\\n]+-----END CERTIFICATE-----",
             "helpMessage": "Must be a valid Kubernetes server Certificate!",
         },
         {
